@@ -1,0 +1,1 @@
+Trilha e efeitos sintetizados originalmente para este projeto, sem samples ou gravações de terceiros. Gerador determinístico: scripts/generate_audio.py. Eventos sincronizados nos frames 14,30,66,87,108,129,150,171,207,246.

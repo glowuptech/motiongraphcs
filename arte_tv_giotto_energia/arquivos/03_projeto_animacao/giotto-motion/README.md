@@ -1,58 +1,13 @@
-# Etapa 1 — separação revisada
+# Entrega Motion Giotto Black Friday
 
-Arte original preservada: 1672 × 941. Composição GiottoBlackFriday: 1920 × 1080, 30 FPS, estática.
+Vídeos renderizados em Remotion e finalizados em FFmpeg. Arquivos na pasta videos_finais: giotto-black-friday-motion-10s.mp4 (AAC), giotto-black-friday-motion-muted.mp4 (sem faixa de áudio) e giotto-black-friday-final-frame.png.
 
-34 camadas registradas: fundo; logo; quatro títulos; três componentes para cada uma das cinco ofertas; três textos de condições; cinco componentes da promoção; dois brilhos; três componentes de rodapé. PNGs com alfa contínuo, coordenadas e centros de transformação em src/data/layers.json. A camada auxiliar extraction-context foi removida.
+Validação ffprobe: 1920 × 1080, 30 FPS, 300 frames, duração do contêiner 10,000 segundos, H.264 e yuv420p. TypeScript passou. Inspeção visual dos frames 0,30,60,90,150,190,230,270,299 em inspecao-motion.jpg. Comparação PNG entre frames 264 e 299: diferença máxima zero. Cinco ofertas mantidas. Entradas determinísticas com spring/easing, posição, escala e desfoque; faixa luminosa na abertura. Sem fade-out.
 
-## Validação
+Trilha eletrônica e efeitos sintetizados originalmente, sem samples de terceiros. Gerador e eventos sincronizados em scripts/generate_audio.py. Não foi realizada avaliação auditiva; áudio foi sintetizado com amplitude limitada e eventos posicionados por frame.
 
-Frame renderizado pelo Remotion/Chromium em previews/frame.png. Reconstrução nativa por alfa: MAE 0, máximo 0. Comparação Full HD com redimensionamento Lanczos: MAE 2,344/255, influenciado pela interpolação do navegador. Comparação em previews/comparison.png; diferenças ampliadas 5× em previews/difference-x5.png; todos os recortes sobre quadriculado em previews/layers-contact-sheet.jpg.
+Limitações visuais: camadas herdadas da etapa 1 têm halos e contaminação do fundo; entrada do produto e bordas das caixas podem mostrar essas limitações. O cenário da abertura usa preenchimento harmônico que suaviza regiões ocultas, sem recuperar detalhes inexistentes no PNG. O fundo original da recomposição retorna entre frames 240–264, sob a arte montada. Não é uma reprodução perfeita do cenário oculto nem garantia de acabamento premium. As áreas visíveis da casa e dos painéis foram mantidas. Inspecionar o vídeo antes de veicular.
 
-Os cinco preços foram preservados por extração de pixels, sem reescrever caracteres. Não foi criada animação.
+Projeto editável: arquivos/03_projeto_animacao/giotto-motion. npm ci, npm run studio e npm run render:motion. Requer Chromium em /usr/bin/chromium e FFmpeg. Timeline em src/config/animation-timeline.ts. A composição principal é GiottoBlackFridayMotion; a composição estática GiottoBlackFriday foi mantida. O ZIP etapa-01-camadas.zip representa apenas a etapa 1; o projeto atualizado está no repositório.
 
-## Limitações visuais verificadas
-
-O arquivo de origem é achatado. A transparência foi estimada contra preenchimentos harmônicos. Há contaminação de cor e pequenas margens do cenário em títulos, logotipo e textos. Etiquetas e caixas podem conter vestígios das áreas originalmente sobrepostas. O recorte do ar-condicionado inclui halo verde; brilhos foram separados, mas a decomposição de luz sobre a cena é estimada. As áreas do fundo atrás das ofertas e banner apresentam manchas e suavização; não representam recuperação exata da cena oculta.
-
-A igualdade da composição montada não valida o isolamento para movimento: esses defeitos podem aparecer com deslocamento de camadas. Esta entrega documenta a separação executada, mas ainda NÃO atende integralmente ao padrão de isolamento profissional solicitado. Não declarar aprovação visual ou prontidão para animação.
-
-## Reproduzir
-
-npm ci; npm run typecheck; npm run still. Chromium: /usr/bin/chromium. Script único de extração: scripts/extract_layers.py, com Pillow, NumPy e OpenCV. O caminho do projeto é resolvido a partir do script.
-
-## Inventário
-
-- background — `assets/background/background.png`
-- decoracao-inferior — `assets/footer/decoracao-inferior.png`
-- brilho-titulo — `assets/effects/brilho-titulo.png`
-- brilho-produto — `assets/effects/brilho-produto.png`
-- confira-ofertas — `assets/titles/confira-ofertas.png`
-- 90-dias — `assets/titles/90-dias.png`
-- primeira-parcela — `assets/titles/primeira-parcela.png`
-- black-friday — `assets/titles/black-friday.png`
-- logo — `assets/logo/logo.png`
-- box-942 — `assets/offers/offer-942/box-942.png`
-- label-942 — `assets/offers/offer-942/label-942.png`
-- text-942 — `assets/offers/offer-942/text-942.png`
-- box-785 — `assets/offers/offer-785/box-785.png`
-- label-785 — `assets/offers/offer-785/label-785.png`
-- text-785 — `assets/offers/offer-785/text-785.png`
-- box-628 — `assets/offers/offer-628/box-628.png`
-- label-628 — `assets/offers/offer-628/label-628.png`
-- text-628 — `assets/offers/offer-628/text-628.png`
-- box-471 — `assets/offers/offer-471/box-471.png`
-- label-471 — `assets/offers/offer-471/label-471.png`
-- text-471 — `assets/offers/offer-471/text-471.png`
-- box-315 — `assets/offers/offer-315/box-315.png`
-- label-315 — `assets/offers/offer-315/label-315.png`
-- text-315 — `assets/offers/offer-315/text-315.png`
-- conditions-cartao — `assets/conditions/conditions-cartao.png`
-- conditions-boleto — `assets/conditions/conditions-boleto.png`
-- conditions-title — `assets/conditions/conditions-title.png`
-- footer-copy — `assets/footer/footer-copy.png`
-- footer-title — `assets/footer/footer-title.png`
-- banner — `assets/promotion/banner.png`
-- texto-sorteio — `assets/promotion/texto-sorteio.png`
-- texto-banner — `assets/promotion/texto-banner.png`
-- 9000-btus — `assets/promotion/9000-btus.png`
-- ar-condicionado — `assets/promotion/ar-condicionado.png`
+Consulte public/assets e src/data/layers.json para as camadas e coordenadas.

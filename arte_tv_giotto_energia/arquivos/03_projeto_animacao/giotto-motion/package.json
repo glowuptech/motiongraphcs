@@ -5,7 +5,8 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "typecheck": "tsc --noEmit",
-    "still": "remotion still src/index.ts GiottoBlackFriday previews/frame.png --browser-executable=/usr/bin/chromium"
+    "still": "remotion still src/index.ts GiottoBlackFriday previews/frame.png --browser-executable=/usr/bin/chromium",
+    "render:motion": "bash scripts/render_motion.sh"
   },
   "dependencies": {
     "@remotion/cli": "4.0.484",
