@@ -1,26 +1,58 @@
-# Etapa 1 — extração inicial e validação estática
+# Etapa 1 — separação revisada
 
-Arte original recebida no RAR e preservada em arquivos/01_arte_original. Dimensões nativas: 1672 × 941. Composição Remotion: 1920 × 1080.
+Arte original preservada: 1672 × 941. Composição GiottoBlackFriday: 1920 × 1080, 30 FPS, estática.
 
-Foram exportadas 31 camadas de conteúdo, fundo reconstruído e uma camada auxiliar de contexto residual (33 entradas em layers.json). As cinco ofertas têm caixa, etiqueta e texto separados. Textos, preços e logotipo foram extraídos dos pixels originais, sem geração ou substituição tipográfica.
+34 camadas registradas: fundo; logo; quatro títulos; três componentes para cada uma das cinco ofertas; três textos de condições; cinco componentes da promoção; dois brilhos; três componentes de rodapé. PNGs com alfa contínuo, coordenadas e centros de transformação em src/data/layers.json. A camada auxiliar extraction-context foi removida.
 
-## Verificações executadas
+## Validação
 
-- TypeScript passou.
-- Frame estático renderizado pelo Remotion com Chromium local.
-- Reconstrução Python na resolução nativa: diferença zero antes da reamostragem.
-- Frame Remotion Full HD comparado com a referência redimensionada: erro médio absoluto 2,268/255 por canal. Reamostragem independente e coordenadas fracionárias afetam bordas.
-- Comparação lado a lado e mapa de diferenças amplificado em 5× disponíveis em previews.
-- Inspeção visual do frame: cinco preços e textos preservados, composição completa.
+Frame renderizado pelo Remotion/Chromium em previews/frame.png. Reconstrução nativa por alfa: MAE 0, máximo 0. Comparação Full HD com redimensionamento Lanczos: MAE 2,344/255, influenciado pela interpolação do navegador. Comparação em previews/comparison.png; diferenças ampliadas 5× em previews/difference-x5.png; todos os recortes sobre quadriculado em previews/layers-contact-sheet.jpg.
 
-## Limitações: ainda não aprovar para animação
+Os cinco preços foram preservados por extração de pixels, sem reescrever caracteres. Não foi criada animação.
 
-A recomposição estática fiel não equivale a isolamento perfeito. Máscaras de textos incluem margem de contexto de 2 pixels; caixas e etiquetas incluem regiões retangulares do fundo. O produto tem máscara poligonal inicial. O inpainting determinístico não recupera a casa e a vegetação ocultas e produz suavização nas áreas grandes.
+## Limitações visuais verificadas
 
-A camada extraction-context mantém resíduos do fundo intermediário para permitir recomposição fiel. Ela deve ser refinada e redistribuída antes de mover elementos; ocultar camadas agora pode revelar marcas e halos. Os brilhos do produto e do título ainda não estão isolados como efeitos independentes. A etapa 1 é uma versão de trabalho, não a separação profissional concluída.
+O arquivo de origem é achatado. A transparência foi estimada contra preenchimentos harmônicos. Há contaminação de cor e pequenas margens do cenário em títulos, logotipo e textos. Etiquetas e caixas podem conter vestígios das áreas originalmente sobrepostas. O recorte do ar-condicionado inclui halo verde; brilhos foram separados, mas a decomposição de luz sobre a cena é estimada. As áreas do fundo atrás das ofertas e banner apresentam manchas e suavização; não representam recuperação exata da cena oculta.
+
+A igualdade da composição montada não valida o isolamento para movimento: esses defeitos podem aparecer com deslocamento de camadas. Esta entrega documenta a separação executada, mas ainda NÃO atende integralmente ao padrão de isolamento profissional solicitado. Não declarar aprovação visual ou prontidão para animação.
 
 ## Reproduzir
 
-Instalar Pillow, numpy e opencv-python-headless para os scripts. Executar scripts/extract_layers.py e depois scripts/refine_background.py. No projeto: npm ci, npm run typecheck e npm run still. Scripts de extração usam o caminho deste checkout em /workspace/motiongraphcs.
+npm ci; npm run typecheck; npm run still. Chromium: /usr/bin/chromium. Script único de extração: scripts/extract_layers.py, com Pillow, NumPy e OpenCV. O caminho do projeto é resolvido a partir do script.
 
-Não foi criada animação nesta etapa.
+## Inventário
+
+- background — `assets/background/background.png`
+- decoracao-inferior — `assets/footer/decoracao-inferior.png`
+- brilho-titulo — `assets/effects/brilho-titulo.png`
+- brilho-produto — `assets/effects/brilho-produto.png`
+- confira-ofertas — `assets/titles/confira-ofertas.png`
+- 90-dias — `assets/titles/90-dias.png`
+- primeira-parcela — `assets/titles/primeira-parcela.png`
+- black-friday — `assets/titles/black-friday.png`
+- logo — `assets/logo/logo.png`
+- box-942 — `assets/offers/offer-942/box-942.png`
+- label-942 — `assets/offers/offer-942/label-942.png`
+- text-942 — `assets/offers/offer-942/text-942.png`
+- box-785 — `assets/offers/offer-785/box-785.png`
+- label-785 — `assets/offers/offer-785/label-785.png`
+- text-785 — `assets/offers/offer-785/text-785.png`
+- box-628 — `assets/offers/offer-628/box-628.png`
+- label-628 — `assets/offers/offer-628/label-628.png`
+- text-628 — `assets/offers/offer-628/text-628.png`
+- box-471 — `assets/offers/offer-471/box-471.png`
+- label-471 — `assets/offers/offer-471/label-471.png`
+- text-471 — `assets/offers/offer-471/text-471.png`
+- box-315 — `assets/offers/offer-315/box-315.png`
+- label-315 — `assets/offers/offer-315/label-315.png`
+- text-315 — `assets/offers/offer-315/text-315.png`
+- conditions-cartao — `assets/conditions/conditions-cartao.png`
+- conditions-boleto — `assets/conditions/conditions-boleto.png`
+- conditions-title — `assets/conditions/conditions-title.png`
+- footer-copy — `assets/footer/footer-copy.png`
+- footer-title — `assets/footer/footer-title.png`
+- banner — `assets/promotion/banner.png`
+- texto-sorteio — `assets/promotion/texto-sorteio.png`
+- texto-banner — `assets/promotion/texto-banner.png`
+- 9000-btus — `assets/promotion/9000-btus.png`
+- ar-condicionado — `assets/promotion/ar-condicionado.png`
