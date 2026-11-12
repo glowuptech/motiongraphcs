@@ -1,0 +1,32 @@
+[
+  {
+    "id": "315",
+    "power": "315 kWh",
+    "installments": "36x de R$ 329,72",
+    "cash": "À vista: R$ 7.900,00"
+  },
+  {
+    "id": "471",
+    "power": "471 kWh",
+    "installments": "36x de R$ 435,23",
+    "cash": "À vista: R$ 9.900,00"
+  },
+  {
+    "id": "628",
+    "power": "628 kWh",
+    "installments": "36x de R$ 531,16",
+    "cash": "À vista: R$ 11.900,00"
+  },
+  {
+    "id": "785",
+    "power": "785 kWh",
+    "installments": "36x de R$ 672,63",
+    "cash": "À vista: R$ 15.300,00"
+  },
+  {
+    "id": "942",
+    "power": "942 kWh",
+    "installments": "36x de R$ 742,97",
+    "cash": "À vista: R$ 16.900,00"
+  }
+]
