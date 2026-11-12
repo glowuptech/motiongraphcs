@@ -1,20 +1,26 @@
-# Estado do projeto Giotto Energia
+# Etapa 1 — extração inicial e validação estática
 
-## Material disponível
+Arte original recebida no RAR e preservada em arquivos/01_arte_original. Dimensões nativas: 1672 × 941. Composição Remotion: 1920 × 1080.
 
-- Prompts completos das etapas 1 e 2 em `arte_tv_giotto_energia/arquivos/04_prompts/`.
-- Vídeo fornecido pelo usuário e imagens de inspeção em `arte_tv_giotto_energia/arquivos/05_referencias/`.
-- Base React, TypeScript e Remotion, dependências fixadas em package-lock.json, componentes de camadas/ofertas, dados comerciais e timeline em `arte_tv_giotto_energia/arquivos/03_projeto_animacao/giotto-motion/`.
-- Pasta `arte_tv_giotto_energia/videos_finais/` reservada às exportações concluídas.
+Foram exportadas 31 camadas de conteúdo, fundo reconstruído e uma camada auxiliar de contexto residual (33 entradas em layers.json). As cinco ofertas têm caixa, etiqueta e texto separados. Textos, preços e logotipo foram extraídos dos pixels originais, sem geração ou substituição tipográfica.
 
-## Trabalho pendente
+## Verificações executadas
 
-A imagem estática apareceu na conversa, mas seu arquivo não foi disponibilizado no sistema de arquivos. O vídeo de referência está preservado. Ainda não existem camadas extraídas, fundo limpo, comparação estática validada ou novos vídeos finais. `layers.json` está vazio e a composição estática recusa renderização sem os elementos.
+- TypeScript passou.
+- Frame estático renderizado pelo Remotion com Chromium local.
+- Reconstrução Python na resolução nativa: diferença zero antes da reamostragem.
+- Frame Remotion Full HD comparado com a referência redimensionada: erro médio absoluto 2,268/255 por canal. Reamostragem independente e coordenadas fracionárias afetam bordas.
+- Comparação lado a lado e mapa de diferenças amplificado em 5× disponíveis em previews.
+- Inspeção visual do frame: cinco preços e textos preservados, composição completa.
 
-Próximo passo: obter a arte original em arquivo ou preparar uma extração documentada da referência disponível, identificando as limitações da compressão e das áreas ocultas; depois concluir a validação das camadas e implementar/renderizar a animação solicitada. Não considerar o vídeo de referência uma entrega gerada.
+## Limitações: ainda não aprovar para animação
 
-## Retomar o desenvolvimento
+A recomposição estática fiel não equivale a isolamento perfeito. Máscaras de textos incluem margem de contexto de 2 pixels; caixas e etiquetas incluem regiões retangulares do fundo. O produto tem máscara poligonal inicial. O inpainting determinístico não recupera a casa e a vegetação ocultas e produz suavização nas áreas grandes.
 
-Usar o checkout existente deste repositório, sem criar worktree salvo solicitação. Entrar em `arte_tv_giotto_energia/arquivos/03_projeto_animacao/giotto-motion`, executar `npm ci` e `npm run typecheck`. Os comandos `npm run studio` e `npm run still` destinam-se à composição após o preenchimento das camadas.
+A camada extraction-context mantém resíduos do fundo intermediário para permitir recomposição fiel. Ela deve ser refinada e redistribuída antes de mover elementos; ocultar camadas agora pode revelar marcas e halos. Os brilhos do produto e do título ainda não estão isolados como efeitos independentes. A etapa 1 é uma versão de trabalho, não a separação profissional concluída.
 
-Os arquivos devem permanecer organizados neste repositório. Publicar atualizações solicitadas no GitHub e entregar as exportações finais na pasta dedicada.
+## Reproduzir
+
+Instalar Pillow, numpy e opencv-python-headless para os scripts. Executar scripts/extract_layers.py e depois scripts/refine_background.py. No projeto: npm ci, npm run typecheck e npm run still. Scripts de extração usam o caminho deste checkout em /workspace/motiongraphcs.
+
+Não foi criada animação nesta etapa.

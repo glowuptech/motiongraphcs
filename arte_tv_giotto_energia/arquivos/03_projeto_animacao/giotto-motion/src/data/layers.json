@@ -1,1 +1,479 @@
-[]
+[
+  {
+    "id": "background",
+    "name": "Background reconstruído",
+    "file": "assets/background/background.png",
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080,
+    "zIndex": 0,
+    "transformOrigin": {
+      "x": 960,
+      "y": 540
+    }
+  },
+  {
+    "id": "extraction-context",
+    "name": "Contexto residual da extração — requer refinamento",
+    "file": "assets/effects/extraction-context.png",
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080,
+    "zIndex": 1,
+    "transformOrigin": {
+      "x": 960,
+      "y": 540
+    }
+  },
+  {
+    "id": "decoracao-inferior",
+    "name": "decoracao-inferior",
+    "file": "assets/footer/decoracao-inferior.png",
+    "x": 98.75598086124401,
+    "y": 992.7736450584484,
+    "width": 1723.6363636363637,
+    "height": 87.22635494155153,
+    "zIndex": 70,
+    "transformOrigin": {
+      "x": 861.8181818181819,
+      "y": 43.61317747077577
+    }
+  },
+  {
+    "id": "confira-ofertas",
+    "name": "confira-ofertas",
+    "file": "assets/titles/confira-ofertas.png",
+    "x": 809.5693779904307,
+    "y": 299.55366631243356,
+    "width": 304.3062200956938,
+    "height": 32.13602550478215,
+    "zIndex": 71,
+    "transformOrigin": {
+      "x": 152.1531100478469,
+      "y": 16.068012752391073
+    }
+  },
+  {
+    "id": "90-dias",
+    "name": "90-dias",
+    "file": "assets/titles/90-dias.png",
+    "x": 741.8181818181819,
+    "y": 230.69075451647183,
+    "width": 442.10526315789474,
+    "height": 67.71519659936239,
+    "zIndex": 72,
+    "transformOrigin": {
+      "x": 221.05263157894737,
+      "y": 33.85759829968119
+    }
+  },
+  {
+    "id": "primeira-parcela",
+    "name": "primeira-parcela",
+    "file": "assets/titles/primeira-parcela.png",
+    "x": 686.6985645933014,
+    "y": 192.81615302869287,
+    "width": 542.0095693779904,
+    "height": 37.87460148777896,
+    "zIndex": 73,
+    "transformOrigin": {
+      "x": 271.0047846889952,
+      "y": 18.93730074388948
+    }
+  },
+  {
+    "id": "black-friday",
+    "name": "black-friday",
+    "file": "assets/titles/black-friday.png",
+    "x": 570.7177033492823,
+    "y": 111.32837407013815,
+    "width": 818.755980861244,
+    "height": 78.04463336875664,
+    "zIndex": 74,
+    "transformOrigin": {
+      "x": 409.377990430622,
+      "y": 39.02231668437832
+    }
+  },
+  {
+    "id": "logo",
+    "name": "logo",
+    "file": "assets/logo/logo.png",
+    "x": 806.1244019138755,
+    "y": 6.886291179596174,
+    "width": 287.08133971291863,
+    "height": 107.88522848034006,
+    "zIndex": 75,
+    "transformOrigin": {
+      "x": 143.54066985645932,
+      "y": 53.94261424017003
+    }
+  },
+  {
+    "id": "box-942",
+    "name": "box-942",
+    "file": "assets/offers/offer-942/box-942.png",
+    "x": 969.1866028708134,
+    "y": 615.1753453772583,
+    "width": 568.421052631579,
+    "height": 103.29436769394262,
+    "zIndex": 76,
+    "transformOrigin": {
+      "x": 284.2105263157895,
+      "y": 51.64718384697131
+    },
+    "offerId": "942"
+  },
+  {
+    "id": "text-942",
+    "name": "text-942",
+    "file": "assets/offers/offer-942/text-942.png",
+    "x": 1092.0574162679425,
+    "y": 638.1296493092455,
+    "width": 339.9043062200957,
+    "height": 70.0106269925611,
+    "zIndex": 77,
+    "transformOrigin": {
+      "x": 169.95215311004785,
+      "y": 35.00531349628055
+    },
+    "offerId": "942"
+  },
+  {
+    "id": "label-942",
+    "name": "label-942",
+    "file": "assets/offers/offer-942/label-942.png",
+    "x": 1165.5502392344497,
+    "y": 595.6641870350691,
+    "width": 191.77033492822966,
+    "height": 44.76089266737513,
+    "zIndex": 78,
+    "transformOrigin": {
+      "x": 95.88516746411483,
+      "y": 22.380446333687566
+    },
+    "offerId": "942"
+  },
+  {
+    "id": "box-785",
+    "name": "box-785",
+    "file": "assets/offers/offer-785/box-785.png",
+    "x": 383.5406698564593,
+    "y": 615.1753453772583,
+    "width": 567.2727272727273,
+    "height": 103.29436769394262,
+    "zIndex": 79,
+    "transformOrigin": {
+      "x": 283.6363636363636,
+      "y": 51.64718384697131
+    },
+    "offerId": "785"
+  },
+  {
+    "id": "text-785",
+    "name": "text-785",
+    "file": "assets/offers/offer-785/text-785.png",
+    "x": 498.3732057416268,
+    "y": 638.1296493092455,
+    "width": 338.75598086124404,
+    "height": 70.0106269925611,
+    "zIndex": 80,
+    "transformOrigin": {
+      "x": 169.37799043062202,
+      "y": 35.00531349628055
+    },
+    "offerId": "785"
+  },
+  {
+    "id": "label-785",
+    "name": "label-785",
+    "file": "assets/offers/offer-785/label-785.png",
+    "x": 562.6794258373205,
+    "y": 595.6641870350691,
+    "width": 191.77033492822966,
+    "height": 44.76089266737513,
+    "zIndex": 81,
+    "transformOrigin": {
+      "x": 95.88516746411483,
+      "y": 22.380446333687566
+    },
+    "offerId": "785"
+  },
+  {
+    "id": "box-628",
+    "name": "box-628",
+    "file": "assets/offers/offer-628/box-628.png",
+    "x": 969.1866028708134,
+    "y": 491.2221041445271,
+    "width": 568.421052631579,
+    "height": 102.14665249734325,
+    "zIndex": 82,
+    "transformOrigin": {
+      "x": 284.2105263157895,
+      "y": 51.07332624867163
+    },
+    "offerId": "628"
+  },
+  {
+    "id": "text-628",
+    "name": "text-628",
+    "file": "assets/offers/offer-628/text-628.png",
+    "x": 1098.9473684210527,
+    "y": 514.1764080765143,
+    "width": 328.42105263157896,
+    "height": 67.71519659936239,
+    "zIndex": 83,
+    "transformOrigin": {
+      "x": 164.21052631578948,
+      "y": 33.85759829968119
+    },
+    "offerId": "628"
+  },
+  {
+    "id": "label-628",
+    "name": "label-628",
+    "file": "assets/offers/offer-628/label-628.png",
+    "x": 1166.6985645933014,
+    "y": 471.71094580233796,
+    "width": 189.47368421052633,
+    "height": 43.61317747077577,
+    "zIndex": 84,
+    "transformOrigin": {
+      "x": 94.73684210526316,
+      "y": 21.806588735387884
+    },
+    "offerId": "628"
+  },
+  {
+    "id": "box-471",
+    "name": "box-471",
+    "file": "assets/offers/offer-471/box-471.png",
+    "x": 383.5406698564593,
+    "y": 491.2221041445271,
+    "width": 567.2727272727273,
+    "height": 102.14665249734325,
+    "zIndex": 85,
+    "transformOrigin": {
+      "x": 283.6363636363636,
+      "y": 51.07332624867163
+    },
+    "offerId": "471"
+  },
+  {
+    "id": "text-471",
+    "name": "text-471",
+    "file": "assets/offers/offer-471/text-471.png",
+    "x": 501.8181818181818,
+    "y": 514.1764080765143,
+    "width": 333.0143540669856,
+    "height": 67.71519659936239,
+    "zIndex": 86,
+    "transformOrigin": {
+      "x": 166.5071770334928,
+      "y": 33.85759829968119
+    },
+    "offerId": "471"
+  },
+  {
+    "id": "label-471",
+    "name": "label-471",
+    "file": "assets/offers/offer-471/label-471.png",
+    "x": 563.8277511961722,
+    "y": 471.71094580233796,
+    "width": 184.8803827751196,
+    "height": 43.61317747077577,
+    "zIndex": 87,
+    "transformOrigin": {
+      "x": 92.4401913875598,
+      "y": 21.806588735387884
+    },
+    "offerId": "471"
+  },
+  {
+    "id": "box-315",
+    "name": "box-315",
+    "file": "assets/offers/offer-315/box-315.png",
+    "x": 568.421052631579,
+    "y": 354.643995749203,
+    "width": 783.1578947368421,
+    "height": 113.62380446333688,
+    "zIndex": 88,
+    "transformOrigin": {
+      "x": 391.57894736842104,
+      "y": 56.81190223166844
+    },
+    "offerId": "315"
+  },
+  {
+    "id": "text-315",
+    "name": "text-315",
+    "file": "assets/offers/offer-315/text-315.png",
+    "x": 736.0765550239234,
+    "y": 381.04144527098833,
+    "width": 450.14354066985646,
+    "height": 76.89691817215729,
+    "zIndex": 89,
+    "transformOrigin": {
+      "x": 225.07177033492823,
+      "y": 38.44845908607864
+    },
+    "offerId": "315"
+  },
+  {
+    "id": "label-315",
+    "name": "label-315",
+    "file": "assets/offers/offer-315/label-315.png",
+    "x": 847.4641148325359,
+    "y": 333.98512221041443,
+    "width": 225.07177033492823,
+    "height": 47.05632306057386,
+    "zIndex": 90,
+    "transformOrigin": {
+      "x": 112.53588516746412,
+      "y": 23.52816153028693
+    },
+    "offerId": "315"
+  },
+  {
+    "id": "conditions-cartao",
+    "name": "conditions-cartao",
+    "file": "assets/conditions/conditions-cartao.png",
+    "x": 740.6698564593302,
+    "y": 789.6280552603613,
+    "width": 450.14354066985646,
+    "height": 33.28374070138151,
+    "zIndex": 91,
+    "transformOrigin": {
+      "x": 225.07177033492823,
+      "y": 16.641870350690755
+    }
+  },
+  {
+    "id": "conditions-boleto",
+    "name": "conditions-boleto",
+    "file": "assets/conditions/conditions-boleto.png",
+    "x": 667.1770334928229,
+    "y": 759.7874601487779,
+    "width": 585.6459330143541,
+    "height": 33.28374070138151,
+    "zIndex": 92,
+    "transformOrigin": {
+      "x": 292.82296650717706,
+      "y": 16.641870350690755
+    }
+  },
+  {
+    "id": "conditions-title",
+    "name": "conditions-title",
+    "file": "assets/conditions/conditions-title.png",
+    "x": 780.8612440191388,
+    "y": 721.912858660999,
+    "width": 366.3157894736842,
+    "height": 40.17003188097768,
+    "zIndex": 93,
+    "transformOrigin": {
+      "x": 183.1578947368421,
+      "y": 20.08501594048884
+    }
+  },
+  {
+    "id": "footer-copy",
+    "name": "footer-copy",
+    "file": "assets/footer/footer-copy.png",
+    "x": 556.9377990430622,
+    "y": 1011.1370882040383,
+    "width": 806.1244019138755,
+    "height": 34.43145589798087,
+    "zIndex": 94,
+    "transformOrigin": {
+      "x": 403.0622009569378,
+      "y": 17.215727948990434
+    }
+  },
+  {
+    "id": "footer-title",
+    "name": "footer-title",
+    "file": "assets/footer/footer-title.png",
+    "x": 547.7511961722488,
+    "y": 970.9670563230605,
+    "width": 823.3492822966507,
+    "height": 37.87460148777896,
+    "zIndex": 95,
+    "transformOrigin": {
+      "x": 411.67464114832535,
+      "y": 18.93730074388948
+    }
+  },
+  {
+    "id": "banner",
+    "name": "banner",
+    "file": "assets/promotion/banner.png",
+    "x": 199.80861244019138,
+    "y": 824.0595111583422,
+    "width": 1520.3827751196172,
+    "height": 131.98724760892668,
+    "zIndex": 96,
+    "transformOrigin": {
+      "x": 760.1913875598086,
+      "y": 65.99362380446334
+    }
+  },
+  {
+    "id": "texto-sorteio",
+    "name": "texto-sorteio",
+    "file": "assets/promotion/texto-sorteio.png",
+    "x": 281.33971291866027,
+    "y": 884.8884165781084,
+    "width": 955.4066985645933,
+    "height": 43.61317747077577,
+    "zIndex": 97,
+    "transformOrigin": {
+      "x": 477.70334928229664,
+      "y": 21.806588735387884
+    }
+  },
+  {
+    "id": "texto-banner",
+    "name": "texto-banner",
+    "file": "assets/promotion/texto-banner.png",
+    "x": 285.933014354067,
+    "y": 843.5706695005314,
+    "width": 948.5167464114833,
+    "height": 41.317747077577046,
+    "zIndex": 98,
+    "transformOrigin": {
+      "x": 474.25837320574163,
+      "y": 20.658873538788523
+    }
+  },
+  {
+    "id": "9000-btus",
+    "name": "9000-btus",
+    "file": "assets/promotion/9000-btus.png",
+    "x": 1383.732057416268,
+    "y": 746.0148777895855,
+    "width": 292.82296650717706,
+    "height": 78.04463336875664,
+    "zIndex": 99,
+    "transformOrigin": {
+      "x": 146.41148325358853,
+      "y": 39.02231668437832
+    }
+  },
+  {
+    "id": "ar-condicionado",
+    "name": "ar-condicionado",
+    "file": "assets/promotion/ar-condicionado.png",
+    "x": 1302.200956937799,
+    "y": 795.3666312433581,
+    "width": 376.6507177033493,
+    "height": 167.5664187035069,
+    "zIndex": 100,
+    "transformOrigin": {
+      "x": 188.32535885167465,
+      "y": 83.78320935175346
+    }
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "nativeWidth": 1672,
+  "nativeHeight": 941,
+  "layers": 32,
+  "nativeRecompositionMAE": 0.0,
+  "nativeMaxDifference": 0,
+  "method": "binary masks with 2px context; deterministic inpainting; not a recovered original background"
+}
