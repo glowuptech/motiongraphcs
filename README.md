@@ -5,5 +5,6 @@ Repositório de projetos de animação. Cada animação deve ter sua própria pa
 ## Projetos
 
 - [Arte de TV — Giotto Energia](arte_tv_giotto_energia/README.md)
+- [Black Friday — Giotto Mobilidade](black_friday_giotto_mobilidade/README.md)
 
 Preserve os arquivos originais e mantenha versões anteriores ao gerar novas entregas. Vídeos finais devem ficar na pasta `videos_finais` de cada projeto.

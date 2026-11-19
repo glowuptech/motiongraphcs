@@ -1,0 +1,167 @@
+{
+  "largura": 1672,
+  "altura": 941,
+  "ordem": "do fundo para a frente",
+  "camadas": [
+    {
+      "arquivo": "fundo.png",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "arquivo": "circuitos-luminosos.png",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "arquivo": "sorteio-placa.png",
+      "x": 1198,
+      "y": 400
+    },
+    {
+      "arquivo": "sorteio-texto-compra.png",
+      "x": 1243,
+      "y": 418
+    },
+    {
+      "arquivo": "sorteio-texto-periodo.png",
+      "x": 1238,
+      "y": 450
+    },
+    {
+      "arquivo": "sorteio-texto-concorra.png",
+      "x": 1234,
+      "y": 479
+    },
+    {
+      "arquivo": "ar-condicionado.png",
+      "x": 1456,
+      "y": 428
+    },
+    {
+      "arquivo": "premio-placa.png",
+      "x": 1214,
+      "y": 516
+    },
+    {
+      "arquivo": "premio-texto.png",
+      "x": 1240,
+      "y": 532
+    },
+    {
+      "arquivo": "modelo-placa.png",
+      "x": 76,
+      "y": 468
+    },
+    {
+      "arquivo": "modelo-texto-rotulo.png",
+      "x": 130,
+      "y": 484
+    },
+    {
+      "arquivo": "modelo-texto-nome.png",
+      "x": 122,
+      "y": 517
+    },
+    {
+      "arquivo": "preco-placa.png",
+      "x": 58,
+      "y": 606
+    },
+    {
+      "arquivo": "preco-texto-a-partir-de.png",
+      "x": 100,
+      "y": 614
+    },
+    {
+      "arquivo": "preco-texto-valor-e-condicao.png",
+      "x": 111,
+      "y": 651
+    },
+    {
+      "arquivo": "parcelamento-placa.png",
+      "x": 80,
+      "y": 730
+    },
+    {
+      "arquivo": "parcelamento-texto.png",
+      "x": 113,
+      "y": 742
+    },
+    {
+      "arquivo": "titulo-placa.png",
+      "x": 414,
+      "y": 120
+    },
+    {
+      "arquivo": "titulo-texto.png",
+      "x": 450,
+      "y": 136
+    },
+    {
+      "arquivo": "subtitulo-placa.png",
+      "x": 534,
+      "y": 234
+    },
+    {
+      "arquivo": "subtitulo-texto.png",
+      "x": 566,
+      "y": 246
+    },
+    {
+      "arquivo": "rodape-financiamento.png",
+      "x": 629,
+      "y": 702
+    },
+    {
+      "arquivo": "chamada-4.png",
+      "x": 87,
+      "y": 411
+    },
+    {
+      "arquivo": "chamada-3.png",
+      "x": 84,
+      "y": 370
+    },
+    {
+      "arquivo": "chamada-2.png",
+      "x": 85,
+      "y": 327
+    },
+    {
+      "arquivo": "chamada-1.png",
+      "x": 83,
+      "y": 281
+    },
+    {
+      "arquivo": "marca-giotto.png",
+      "x": 738,
+      "y": 2
+    },
+    {
+      "arquivo": "whatsapp-faixa.png",
+      "x": 66,
+      "y": 806
+    },
+    {
+      "arquivo": "whatsapp-chamada.png",
+      "x": 300,
+      "y": 827
+    },
+    {
+      "arquivo": "whatsapp-icone.png",
+      "x": 188,
+      "y": 818
+    },
+    {
+      "arquivo": "moto-x1.png",
+      "x": 814,
+      "y": 309
+    },
+    {
+      "arquivo": "moto-bis.png",
+      "x": 505,
+      "y": 418
+    }
+  ]
+}

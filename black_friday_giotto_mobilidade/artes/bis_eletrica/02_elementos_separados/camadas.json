@@ -1,0 +1,147 @@
+{
+  "largura": 1672,
+  "altura": 941,
+  "ordem": "do fundo para a frente",
+  "camadas": [
+    {
+      "arquivo": "fundo.png",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "arquivo": "circuitos-luminosos.png",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "arquivo": "sorteio-placa.png",
+      "x": 774,
+      "y": 686
+    },
+    {
+      "arquivo": "sorteio-texto-compra.png",
+      "x": 847,
+      "y": 695
+    },
+    {
+      "arquivo": "sorteio-texto-periodo.png",
+      "x": 847,
+      "y": 732
+    },
+    {
+      "arquivo": "sorteio-texto-concorra.png",
+      "x": 847,
+      "y": 760
+    },
+    {
+      "arquivo": "ar-condicionado.png",
+      "x": 1224,
+      "y": 694
+    },
+    {
+      "arquivo": "premio-placa.png",
+      "x": 822,
+      "y": 802
+    },
+    {
+      "arquivo": "premio-texto.png",
+      "x": 904,
+      "y": 819
+    },
+    {
+      "arquivo": "modelo-placa.png",
+      "x": 128,
+      "y": 570
+    },
+    {
+      "arquivo": "modelo-texto-rotulo.png",
+      "x": 180,
+      "y": 585
+    },
+    {
+      "arquivo": "modelo-texto-nome.png",
+      "x": 174,
+      "y": 608
+    },
+    {
+      "arquivo": "preco-placa.png",
+      "x": 70,
+      "y": 684
+    },
+    {
+      "arquivo": "preco-texto-a-partir-de.png",
+      "x": 147,
+      "y": 699
+    },
+    {
+      "arquivo": "preco-texto-valor-e-condicao.png",
+      "x": 148,
+      "y": 730
+    },
+    {
+      "arquivo": "parcelamento-placa.png",
+      "x": 130,
+      "y": 816
+    },
+    {
+      "arquivo": "parcelamento-texto.png",
+      "x": 169,
+      "y": 830
+    },
+    {
+      "arquivo": "titulo-placa.png",
+      "x": 122,
+      "y": 164
+    },
+    {
+      "arquivo": "titulo-texto.png",
+      "x": 181,
+      "y": 190
+    },
+    {
+      "arquivo": "subtitulo-placa.png",
+      "x": 256,
+      "y": 294
+    },
+    {
+      "arquivo": "subtitulo-texto.png",
+      "x": 292,
+      "y": 306
+    },
+    {
+      "arquivo": "rodape-financiamento.png",
+      "x": 359,
+      "y": 892
+    },
+    {
+      "arquivo": "chamada-4.png",
+      "x": 140,
+      "y": 526
+    },
+    {
+      "arquivo": "chamada-3.png",
+      "x": 138,
+      "y": 480
+    },
+    {
+      "arquivo": "chamada-2.png",
+      "x": 138,
+      "y": 437
+    },
+    {
+      "arquivo": "chamada-1.png",
+      "x": 137,
+      "y": 388
+    },
+    {
+      "arquivo": "marca-giotto.png",
+      "x": 707,
+      "y": 8
+    },
+    {
+      "arquivo": "moto-bis.png",
+      "x": 941,
+      "y": 117
+    }
+  ]
+}
