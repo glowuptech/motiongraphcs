@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT/'artes'
-OUT = ROOT/'videos_finais'/'giotto_black_friday_reels_20s_v01.mp4'
+OUT = ROOT/'videos_finais'/'giotto_black_friday_reels_20s_v02.mp4'
 W,H,FPS=1080,1920,30
 LIME=(184,255,19)
 WHITE=(242,246,237)
@@ -36,9 +36,10 @@ def logo():
 
 LOGO=logo()
 BLACK,FRIDAY=[asset('capa_duas_motos','titulo-'+word) for word in ('black','friday')]
-X1=asset('banner_mobilidade','moto-x1')
-BIS=asset('capa_duas_motos','moto-bis')
-AC=asset('bis_eletrica','ar-condicionado')
+RECORTES = Path(__file__).resolve().parent / 'recortes'
+X1 = Image.open(RECORTES / 'moto-x1.png').convert('RGBA')
+BIS = Image.open(RECORTES / 'moto-bis.png').convert('RGBA')
+AC = Image.open(RECORTES / 'split.png').convert('RGBA')
 def clamp(x): return max(0,min(1,x))
 def ease(x): return 1-(1-clamp(x))**3
 def sprite(im,obj,cx,cy,width):
@@ -108,25 +109,28 @@ def stage(im,x,y,rx,ry):
 
 
 def product3d(im,t):
-    # Project a shallow cabinet, texture its front plane with the original product.
-    yaw=.34*math.sin(t*1.55-.7)
-    verts=[]
-    for z in (0,95):
-        pts=[]
-        for x,y in [(-385,-113),(385,-113),(385,113),(-385,113)]:
-            xx=x*math.cos(yaw)+z*math.sin(yaw)
-            depth=1500-x*math.sin(yaw)+z*math.cos(yaw)
-            pts.append([540+1500*xx/depth,945+(y-z*.20)*1500/depth-9*math.sin(t*2)])
-        verts.append(np.float32(pts))
-    front,back=verts;d=ImageDraw.Draw(im)
-    for i,j,col in [(0,1,(192,199,181)),((1 if yaw>0 else 3),(2 if yaw>0 else 0),(131,142,129))]:
-        d.polygon([tuple(p) for p in [front[i],front[j],back[j],back[i]]],fill=col)
-    a=np.array(AC)
-    src=np.float32([[0,0],[AC.width-1,0],[AC.width-1,AC.height-1],[0,AC.height-1]])
-    pos=front.min(axis=0).astype(int)-2
-    extent=np.ceil(front.max(axis=0)-pos).astype(int)+3
-    warp=cv2.warpPerspective(a,cv2.getPerspectiveTransform(src,front-pos.astype(np.float32)),tuple(map(int,extent)),flags=cv2.INTER_CUBIC)
-    patch=Image.fromarray(warp);im.paste(patch,tuple(map(int,pos)),patch)
+    # A foto inclui a saída de ar e as bordas arredondadas do gabinete.
+    # Transforme toda a silhueta junta durante o giro.
+    yaw = math.radians(8) * math.sin(t * 1.38 - .7)
+    width = 765
+    height = width * AC.height / AC.width
+    corners = []
+    for x, y in [(-width/2, -height/2), (width/2, -height/2),
+                 (width/2, height/2), (-width/2, height/2)]:
+        perspective = 1800 / (1800 - x * math.sin(yaw))
+        corners.append((540 + x * math.cos(yaw) * perspective,
+                        945 + y * perspective - 7 * math.sin(t * 1.7)))
+    target = np.float32(corners)
+    origin = np.floor(target.min(axis=0)).astype(int) - 2
+    extent = np.ceil(target.max(axis=0) - origin).astype(int) + 3
+    source = np.float32([[0, 0], [AC.width-1, 0],
+                         [AC.width-1, AC.height-1], [0, AC.height-1]])
+    transform = cv2.getPerspectiveTransform(source, target - origin.astype(np.float32))
+    premultiplied = np.asarray(AC.convert('RGBa'))
+    warp = cv2.warpPerspective(premultiplied, transform, tuple(map(int, extent)),
+                               flags=cv2.INTER_LINEAR)
+    patch = Image.frombytes('RGBa', tuple(map(int, extent)), warp.tobytes()).convert('RGBA')
+    im.paste(patch, tuple(map(int, origin)), patch)
 
 
 def energy(im,t,boost):

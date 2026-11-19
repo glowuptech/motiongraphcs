@@ -14,4 +14,4 @@ O arquivo renderizar_motion.py na raiz do projeto contém a sequência de entrad
 
 ## Anúncio vertical para Reels e Stories
 
-[Baixar o anúncio de 20 segundos](giotto_black_friday_reels_20s_v01.mp4). Composição vertical de 1080 × 1920 a 30 fps, com trilha eletrônica original e efeitos sincronizados. As cinco cenas apresentam a campanha, os modelos X1 e BIS, o preço à vista e o parcelamento, o sorteio de novembro e a chamada final.
+[Baixar o anúncio de 20 segundos](giotto_black_friday_reels_20s_v02.mp4). Composição vertical de 1080 × 1920 a 30 fps, com trilha eletrônica original e efeitos sincronizados. As cinco cenas apresentam a campanha, os modelos X1 e BIS, o preço à vista e o parcelamento, o sorteio de novembro e a chamada final.
