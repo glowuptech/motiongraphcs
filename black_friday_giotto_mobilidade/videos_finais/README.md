@@ -11,3 +11,7 @@ O arquivo renderizar_motion.py na raiz do projeto contém a sequência de entrad
 ## Capa com duas motos
 
 [Baixar a capa animada com impacto](capa_duas_motos_impacto_v01.mp4). O título cai e levanta fumaça. Em seguida entram a faixa, as motos e o logotipo. Vídeo Full HD de 10 segundos com efeito sonoro de impacto.
+
+## Anúncio vertical para Reels e Stories
+
+[Baixar o anúncio de 20 segundos](giotto_black_friday_reels_20s_v01.mp4). Composição vertical de 1080 × 1920 a 30 fps, com trilha eletrônica original e efeitos sincronizados. As cinco cenas apresentam a campanha, os modelos X1 e BIS, o preço à vista e o parcelamento, o sorteio de novembro e a chamada final.
