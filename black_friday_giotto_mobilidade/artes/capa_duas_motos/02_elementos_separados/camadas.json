@@ -1,0 +1,87 @@
+{
+  "largura": 1672,
+  "altura": 941,
+  "ordem": "do fundo para a frente",
+  "camadas": [
+    {
+      "arquivo": "fundo.png",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "arquivo": "circuitos-inferiores-direita.png",
+      "x": 1436,
+      "y": 854
+    },
+    {
+      "arquivo": "circuitos-inferiores.png",
+      "x": 0,
+      "y": 860
+    },
+    {
+      "arquivo": "circuitos-esquerda.png",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "arquivo": "circuitos-superiores.png",
+      "x": 360,
+      "y": 0
+    },
+    {
+      "arquivo": "placa-black-friday.png",
+      "x": 368,
+      "y": 242
+    },
+    {
+      "arquivo": "faixa-verde.png",
+      "x": 492,
+      "y": 636
+    },
+    {
+      "arquivo": "subtitulo-giotto-mobilidade.png",
+      "x": 539,
+      "y": 658
+    },
+    {
+      "arquivo": "titulo-friday.png",
+      "x": 474,
+      "y": 453
+    },
+    {
+      "arquivo": "titulo-black.png",
+      "x": 486,
+      "y": 276
+    },
+    {
+      "arquivo": "marca-assinatura.png",
+      "x": 703,
+      "y": 225
+    },
+    {
+      "arquivo": "marca-mobilidade-eletrica.png",
+      "x": 690,
+      "y": 201
+    },
+    {
+      "arquivo": "marca-giotto.png",
+      "x": 676,
+      "y": 163
+    },
+    {
+      "arquivo": "marca-simbolo.png",
+      "x": 771,
+      "y": 22
+    },
+    {
+      "arquivo": "moto-x1.png",
+      "x": 1154,
+      "y": 288
+    },
+    {
+      "arquivo": "moto-bis.png",
+      "x": 28,
+      "y": 345
+    }
+  ]
+}
